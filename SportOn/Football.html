@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
+  <title>Football Accessories</title>
+</head>
+<body>
+
+
+  <header>
+    <nav>
+        <ul>
+          <h1><li><a href="index.html">SPORTON</a></li></h1>
+          <h2><li><a href="SignUp.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#" id="show-cart"><img src="cart-icon.png" alt="Show Cart"></a></li></h2>
+        </ul>
+      </nav>
+  </header>
+
+
+
+  <section class="football-products">
+    <h2>Football Accessories</h2>
+
+    <div class="product-grid">
+      <!-- Football Ball 1 -->
+      <div class="product">
+        <img src="football1.png" alt="Nike Football">
+        <p>Nike Football</p>
+        <p>₹2499</p>
+        <button class="add-to-cart" onclick="addToCart('Nike Football', 2499)">Add to Cart</button>
+      </div>
+
+      <!-- Football Ball 2 -->
+      <div class="product">
+        <img src="football2.png" alt="Fifa 2023 Football">
+        <p>Fifa 2023 Football</p>
+        <p>₹3599</p>
+        <button class="add-to-cart" onclick="addToCart('Fifa 2023 Football', 3599)">Add to Cart</button>
+      </div>
+
+      <!-- Football Shoes -->
+      <div class="product">
+        <img src="studs.webp" alt="Nike Studds">
+        <br><br>
+        <p>Nike Studds</p>
+        <p>₹7999</p>
+        <button class="add-to-cart" onclick="addToCart('Nike Studds', 7999)">Add to Cart</button>
+      </div>
+
+      <!-- Football Jerseys -->
+      <div class="product">
+        <img src="football-jersey.jpg" alt="FC Barcelona Jersey">
+        <p>FC Barcelina Jersey</p>
+        <p>₹699</p>
+        <button class="add-to-cart" onclick="addToCart('FC Barcelona Jersey', 699)">Add to Cart</button>
+      </div>
+
+      <!-- Football Goalkeeper Gloves -->
+      <div class="product">
+        <img src="keeper_gloves.jpg" alt="KOBO Keeping Gloves">
+        <p>KOBO Keeping Gloves</p>
+        <p>₹1399</p>
+        <button class="add-to-cart" onclick="addToCart('KOBO Keeping Gloves', 1399)">Add to Cart</button>
+      </div>
+
+      <!-- Football Shin Guards -->
+      <div class="product">
+        <img src="football-shin-guards.jpg" alt="Nike Shin Guards">
+        <p>Nike Shin Guards</p>
+        <p>₹299</p>
+        <button class="add-to-cart" onclick="addToCart('Nike Sin Guards', 299)">Add to Cart</button>
+      </div>
+
+      <!-- Football Goal Post -->
+      <div class="product">
+        <img src="goalpost.jpg" alt="KIPSTA Goalpost">
+        <p>KIPSTA Goalpost</p>
+        <p>₹5499</p>
+        <button class="add-to-cart" onclick="addToCart('KIPSTA Goalpost', 5499)">Add to Cart</button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <section id="cart" class="cart">
+    <button id="close-cart" onclick="closeCart()">Close Cart</button>
+    <ul id="cart-items"></ul>
+    <button id="buy-now" onclick="buyNow()">Buy Now</button>
+    
+  </section>
+
+
+
+
+
+  <div id="buyNowModal" class="modal">
+    <div class="modal-content">
+      <span id="close-buy-now-modal" class="close">&times;</span>
+      <h2>Enter Your Details</h2>
+      <label for="address">Address:</label>
+      <input type="text" id="address" placeholder="Enter your address">
+      <button id="submit-order" onclick="submitOrder()">Submit Order</button>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <span id="close-payment-modal" class="close" onclick="closePaymentModal()">&times;</span>
+      <h2>Select Payment Method</h2>
+      <div id="payment-options"></div>
+      <label for="total-amount">Total Amount:</label>
+      <span id="total-amount"></span>
+      <button id="confirm-payment">Confirm Payment</button>
+    </div>
+  </div>
+  
+  
+
+
+
+
+  <div id="congratulationsModal" class="modal">
+    <div class="modal-content">
+      <span id="close-congratulations-modal" class="close" onclick="closeCongratulationsModal()">&times;</span>
+      <h2>Congratulations!</h2>
+      <p>Your order has been placed successfully.</p>
+    </div>
+  </div>
+
+
+  
+
+  <footer>
+    <p>&copy; 2023 Sporton. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

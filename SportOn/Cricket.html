@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
+  <title>Cricket Accessories</title>
+</head>
+<body>
+
+
+  <header>
+    <nav>
+        <ul>
+          <h1><li><a href="index.html">SPORTON</a></li></h1>
+          <h2><li><a href="SignUp.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#" id="show-cart"><img src="cart-icon.png" alt="Show Cart"></a></li></h2>
+        </ul>
+      </nav>
+  </header>
+
+  <section class="cricket-products">
+    <h2>Cricket Accessories</h2>
+
+    <div class="product-grid">
+      <!-- Cricket Bat 1 -->
+      <div class="product">
+        <img src="ss_bat.jpg" alt="SS Bat">
+        <p>SS Bat</p>
+        <p>₹1999</p>
+        <button class="add-to-cart" onclick="addToCart('SS Bat', 1999)">Add to Cart</button>
+      </div>
+
+      <!-- Cricket Bat 2 -->
+      <div class="product">
+        <img src="mrfbat.webp" alt="MRF Bat">
+        <p>MRF Bat</p>
+        <p>₹2499</p>
+        <button class="add-to-cart" onclick="addToCart('MRF Bat', 2499)">Add to Cart</button>
+      </div>
+
+      <!-- Cricket Ball 1 -->
+      <div class="product">
+        <img src="ball1.jpeg" alt="White Ball">
+        <br><br><br><br>
+        <p>White Ball</p>
+        <p>₹149</p>
+        <button class="add-to-cart" onclick="addToCart('White Ball', 149)">Add to Cart</button>
+      </div>
+
+      <!-- Cricket Ball 2 -->
+      <div class="product">
+        <img src="ball2.jpeg" alt="Red Ball">
+        <br><br><br><br>
+        <p>Red Ball</p>
+        <p>₹199</p>
+        <button class="add-to-cart" onclick="addToCart('Red Ball', 199)">Add to Cart</button>
+      </div>
+
+      <!-- Cricket Shoes -->
+      <div class="product">
+        <img src="shoe1.jpeg" alt="SG Shoes">
+        <br><br><br><br>
+        <p>SG Shoes</p>
+        <p>₹2399</p>
+        <button class="add-to-cart" onclick="addToCart('SG Shoes', 2399)">Add to Cart</button>
+      </div>
+
+      <!-- Cricket Pads -->
+      <div class="product">
+        <img src="cricket-batting-pads.webp" alt="Cricket Pads">
+        <p>Cricket Pads</p>
+        <p>₹1499</p>
+        <button class="add-to-cart" onclick="addToCart('Cricket Pads', 1499)">Add to Cart</button>
+      </div>
+
+      <!-- Cricket Gloves -->
+      <div class="product">
+        <img src="gloves.webp" alt="Cricket Gloves">
+        <p>Cricket Gloves</p>
+        <p>₹1299</p>
+        <button class="add-to-cart" onclick="addToCart('Cricket Gloves', 1299)">Add to Cart</button>
+      </div>
+
+      <!-- Cricket Helmet -->
+      <div class="product">
+        <img src="shrey-cricket-helmet.jpg" alt="Shrey Cricket Helmet">
+        <p>Shrey Cricket Helmet</p>
+        <p>₹2699</p>
+        <button class="add-to-cart" onclick="addToCart('Shrey Cricket Helmet', 2699)">Add to Cart</button>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section id="cart" class="cart">
+    <button id="close-cart" onclick="closeCart()">Close Cart</button>
+    <ul id="cart-items"></ul>
+    <button id="buy-now" onclick="buyNow()">Buy Now</button>
+    
+  </section>
+
+
+
+  <div id="buyNowModal" class="modal">
+    <div class="modal-content">
+      <span id="close-buy-now-modal" class="close">&times;</span>
+      <h2>Enter Your Details</h2>
+      <label for="address">Address:</label>
+      <input type="text" id="address" placeholder="Enter your address">
+      <button id="submit-order" onclick="submitOrder()">Submit Order</button>
+    </div>
+  </div>
+
+
+
+
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <span id="close-payment-modal" class="close" onclick="closePaymentModal()">&times;</span>
+      <h2>Select Payment Method</h2>
+      <div id="payment-options"></div>
+      <label for="total-amount">Total Amount:</label>
+      <span id="total-amount"></span>
+      <button id="confirm-payment">Confirm Payment</button>
+    </div>
+  </div>
+  
+  
+
+
+
+  <div id="congratulationsModal" class="modal">
+    <div class="modal-content">
+      <span id="close-congratulations-modal" class="close" onclick="closeCongratulationsModal()">&times;</span>
+      <h2>Congratulations!</h2>
+      <p>Your order has been placed successfully.</p>
+    </div>
+  </div>
+
+
+
+
+  <footer>
+    <p>&copy; 2023 Sporton. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
